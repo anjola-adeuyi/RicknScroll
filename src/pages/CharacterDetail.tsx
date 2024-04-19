@@ -4,12 +4,11 @@ import { Character } from '../types/types';
 import LoadingComponent from '../components/Loading';
 import useQuery from '../hooks/useQuery';
 import ErrorComponent from '../components/Error';
+import { API_URL_CHARACTER } from '../utils/constant';
 
 const CharacterDetails: React.FC = () => {
   const { id } = useParams();
-  const { data: character, error, loading } = useQuery<Character>(`https://rickandmortyapi.com/api/character/${id}`);
-
-  console.log({ character, error, loading });
+  const { data: character, error, loading } = useQuery<Character>(`${API_URL_CHARACTER}/${id}`);
 
   if (error)
     return (

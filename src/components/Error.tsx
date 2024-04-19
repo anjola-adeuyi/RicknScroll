@@ -7,6 +7,12 @@ const ErrorComponent: React.FC<{ message: string; onRefresh?: () => void; NoRefr
 }) => {
   return (
     <div className="flex flex-col gap-4 items-center justify-center h-screen">
+      <div>
+        <img
+          src="https://rickandmortyapi.com/api/character/avatar/65.jpeg"
+          alt="Error"
+        />
+      </div>
       {message || 'Character not found. Please try again.'}
       {!NoRefresh && (
         <div>

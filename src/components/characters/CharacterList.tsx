@@ -8,9 +8,9 @@ interface CharacterListProps {
 const CharacterList: React.FC<CharacterListProps> = ({ characters }) => {
   return (
     <div className="flex flex-wrap justify-center gap-5">
-      {characters?.map((character) => (
+      {characters?.map((character, index) => (
         <CharacterCard
-          key={character.id}
+          key={`${index}-${character.id}`}
           id={character.id}
           name={character.name}
           image={character.image}

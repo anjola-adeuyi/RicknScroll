@@ -43,7 +43,10 @@ const Homepage: React.FC = () => {
       </svg>
       <div>
         <h1 className="text-2xl font-bold mb-4 text-center">Characters</h1>
-        <SearchBar onSearch={handleSearch} />
+        <SearchBar
+          onSearch={handleSearch}
+          searchQuery={searchQuery}
+        />
         <Characters
           setSearchQuery={setSearchQuery}
           debouncedSearchQuery={debouncedSearchQuery}

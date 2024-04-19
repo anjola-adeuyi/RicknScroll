@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# RicknScroll
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Visit the RicknScroll app](https://rick-n-scroll.vercel.app/)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Infinite Scrolling**: Scroll through an extensive list of characters without having to navigate through pages.
+- **Search Functionality**: Search for characters by their name to quickly find specific characters.
+- **Loading Indicator**: Visual indication of loading state when fetching more characters.
+- **Error Handling**: Provides user-friendly error messages in case of failed API requests.
+- **Responsiveness**: Responsive design that works well on desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Frontend library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static typing to the language.
+- **Tailwind CSS**: Utility-first CSS framework for styling components.
+- **Axios**: A popular HTTP client for making API requests.
+- **React Router DOM**: A routing library for React applications.
+- **Rick and Morty API**: External API used to fetch character data.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To run RicknScroll locally, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/anjola-adeuyi/RicknScroll.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   cd RicknScroll
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and navigate to http://localhost:3000 to view the application.
+
+[To visit the RicknScroll app](https://rick-n-scroll.vercel.app/)
