@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [query, setQuery] = useState<string>('');
+  const [searchQuery, setSearchQuery] = React.useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
     onSearch(e.target.value);
+    setSearchQuery(e.target.value);
   };
 
   return (
@@ -18,7 +18,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         type="text"
         className="w-full text-black px-4 py-2 border rounded-md focus:outline-none focus:border-slate-500"
         placeholder="Search characters by name..."
-        value={query}
+        value={searchQuery}
         onChange={handleChange}
       />
     </div>

@@ -24,6 +24,7 @@ const useQuery = <T>(url: string): QueryResult<T> => {
         setData(response.data);
       } catch (error) {
         console.log({ error });
+        setLoading(false);
         if (axios.isCancel(error)) {
           console.log('Request canceled');
         } else {
@@ -40,7 +41,7 @@ const useQuery = <T>(url: string): QueryResult<T> => {
           }
         }
       } finally {
-        setLoading(true);
+        setLoading(false);
       }
     };
 
