@@ -2,16 +2,16 @@ import React from 'react';
 
 interface CharacterCardProps {
   name: string;
-  imageUrl: string;
+  image: string;
   status: string;
 }
 
-const CharacterCard: React.FC<CharacterCardProps> = ({ name, imageUrl, status }) => {
+const CharacterCard: React.FC<CharacterCardProps> = ({ name, image, status }) => {
   return (
     <div className="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
       <img
         className="object-cover w-full h-56"
-        src={imageUrl || 'https://rickandmortyapi.com/api/character/avatar/4.jpeg'}
+        src={image || 'https://rickandmortyapi.com/api/character/avatar/4.jpeg'}
         alt=""
       />
 

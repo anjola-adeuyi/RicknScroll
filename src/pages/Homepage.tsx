@@ -1,7 +1,19 @@
 import React from 'react';
 import CharacterList from '../components/CharacterList';
+import useQuery from '../hooks/useQuery';
+import { CharacterResult } from '../types/types';
+import SearchBar from '../components/SearchBar';
 
 const Homepage: React.FC = () => {
+  const { data, loading, error } = useQuery<CharacterResult>('https://rickandmortyapi.com/api/character');
+
+  // eslint-disable-next-line no-console
+  console.log({ data, loading, error });
+
+  if (loading && !data?.results) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!data) return <div>No data</div>;
+
   return (
     <div>
       <svg
@@ -28,8 +40,10 @@ const Homepage: React.FC = () => {
           fill="white"
         />
       </svg>
-      <div className="">
-        <CharacterList characters={[{ id: 1, status: 'dead', imageUrl: '', name: 'Ricky Micky' }]} />
+      <div>
+        <h1 className="text-2xl font-bold mb-4 text-center">Characters</h1>
+        <SearchBar />
+        <CharacterList characters={data.results} />
       </div>
     </div>
   );

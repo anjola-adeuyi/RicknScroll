@@ -1,12 +1,6 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
-
-interface Character {
-  id: number;
-  name: string;
-  imageUrl: string;
-  status: string;
-}
+import { Character } from '../types/types';
 
 interface CharacterListProps {
   characters: Character[];
@@ -18,7 +12,7 @@ const CharacterList: React.FC<CharacterListProps> = ({ characters }) => {
         <CharacterCard
           key={character.id}
           name={character.name}
-          imageUrl={character.imageUrl}
+          image={character.image}
           status={character.status}
         />
       ))}
