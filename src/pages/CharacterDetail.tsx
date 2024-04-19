@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const CharacterDetail = () => {
-  return (
-    <div>CharacterDetail</div>
-  )
-}
+const CharacterDetail: React.FC = () => {
+  return <div>CharacterDetail</div>;
+};
 
-export default CharacterDetail
+export default CharacterDetail;

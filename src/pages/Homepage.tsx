@@ -1,7 +1,7 @@
 import React from 'react';
 import CharacterList from '../components/CharacterList';
 
-const Homepage = () => {
+const Homepage: React.FC = () => {
   return (
     <div>
       <svg
@@ -29,7 +29,7 @@ const Homepage = () => {
         />
       </svg>
       <div className="">
-        <CharacterList />
+        <CharacterList characters={[{ id: 1, status: 'dead', imageUrl: '', name: 'Ricky Micky' }]} />
       </div>
     </div>
   );
