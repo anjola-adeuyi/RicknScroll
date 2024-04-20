@@ -39,7 +39,7 @@ const Characters: React.FC<CharactersProps> = ({ debouncedSearchQuery, setSearch
       setPage((prevPage) => prevPage + 1);
       data?.info.next && fetchMoreCharacters(data?.info.next);
       setShowLoadingText(false);
-    }, 1500);
+    }, 500);
   }, [data?.info.next]);
 
   const loadMoreCharacters = useCallback(() => {
